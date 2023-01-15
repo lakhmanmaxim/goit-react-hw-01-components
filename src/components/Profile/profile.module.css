@@ -80,7 +80,7 @@ margin-bottom: 0;
     box-shadow: 1px 3px 4px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
 }
 
-.stats-item {
+.stats_item {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -94,11 +94,11 @@ margin-bottom: 0;
     width: 100px;
 }
 
-.stats-item:first-child {
+.stats_item:first-child {
 border-bottom-left-radius: 15px;
 }
 
-.stats-item:last-child {
+.stats_item:last-child {
     border-bottom-right-radius: 15px;
 }
 
