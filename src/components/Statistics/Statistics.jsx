@@ -1,28 +1,30 @@
-import "./statistics.module.css";
+import styles from"./statistics.module.css";
 
 const Statistics = ({title, stats}) => {
     
-    const h2 = title ? <h2 className="title">{title}</h2> : "";
+    const h2 = title ? <h2 className={styles.title}>{title}</h2> : "";
 
-    const item = stats.map(stat =>
-    <li className="item">
-      <span className="label">{stat.label}</span>
-      <span className="percentage"> - {stat.percentage}%</span>
+    const items = stats.map(stat =>
+    <li  key={stats.id} className={styles.item} data-action="bg-color">
+      <span className={styles.label}>{stat.label}</span>
+      <span className="percentage">{stat.percentage}%</span>
     </li>
   )
-
+        
   return (
 <>
-<section className="statistics">
+<section className={styles.statistics}>
   {h2}
 
-  <ul className="stat-list">
-   {item}
+  <ul className={styles.stat_list}>
+   {items}
   </ul>
-  
+
 </section>
+
 </>
 )
 }
 
 export default Statistics;
+
