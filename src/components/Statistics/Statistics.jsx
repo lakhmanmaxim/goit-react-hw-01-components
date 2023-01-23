@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import styles from "./statistics.module.css";
-import { getRandomHexColor } from "../../GetRandomColor/getRandomHexColor.js";
+import { getRandomHexColor } from "../../getRandomColor/getRandomHexColor.js";
 
 const Statistics = ({title, stats}) => {
     
-    const h2 = title ? <h2 className={styles.title}>{title}</h2> : "";
+    // const h2 = title ? <h2 className={styles.title}>{title}</h2> : "";
+    const h2 = title && <h2 className={styles.title}>{title}</h2>;
 
   const items = stats.map(stat => 
     <li key={stat.id} className={styles.item} style={{ backgroundColor: getRandomHexColor() }}>
