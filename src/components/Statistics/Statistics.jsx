@@ -3,8 +3,7 @@ import styles from "./statistics.module.css";
 import { getRandomHexColor } from "../../getRandomColor/getRandomHexColor.js";
 
 const Statistics = ({title, stats}) => {
-    
-    // const h2 = title ? <h2 className={styles.title}>{title}</h2> : "";
+  
     const h2 = title && <h2 className={styles.title}>{title}</h2>;
 
   const items = stats.map(stat => 
